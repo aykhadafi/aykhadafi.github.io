@@ -10,8 +10,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css" />
     <!--My CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css" />
         <link rel="shortcut icon" href="img/favicon.ico"/>
+
     
     <title>Amri Yahya Khadafi</title>
   </head>
@@ -52,7 +54,7 @@
     <section class="jumbotron text-center">
       <img src="img/foto.jpg" alt="Amri Yahya Khadafi" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Amri Yahya Khadafi</h1>
-      <p class="lead">Web Programmer | UI/UX Designer</p> <a class="btn btn-light shadow" href="https://drive.google.com/file/d/19suZI0qvMo9tFr_okA8cQt1z5Peszoug/view?usp=sharing"><i class="bi bi-download"></i> Download CV</a>
+      <p class="lead"></p> <a class="btn btn-light shadow" href="https://drive.google.com/file/d/19suZI0qvMo9tFr_okA8cQt1z5Peszoug/view?usp=sharing"><i class="bi bi-download"></i> Download CV</a>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -65,17 +67,17 @@
 
     <!--About-->
     <section id="about">
-      <div class="container">
+      <div class="container" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="200">
         <div class="row text-center mb-3">
           <div class="col">
             <h2><i class="bi bi-person-fill"></i>  About Me</h2>
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4"><p>Saya seorang lulusan dari jurusan Informatika S1 Universitas Nasional, Saya senang mempelajari web programming dan mengatasi problem solving, selain itu
-            saya senang membuat UI/UX Design menggunakan Figma dan mahir menggunakan software Photoshop</p></div>
+          <div class="col-md-4" data-aos="fade-right"><p>Saya seorang lulusan dari jurusan Informatika S1 Universitas Nasional, Saya senang mempelajari web programming dan mengatasi problem solving, selain itu
+            saya senang membuat UI/UX Design menggunakan Figma dan mahir menggunakan software Photoshop serta Microsoft Excel</p></div>
 
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
             <p>Saya memiliki tinggi badan 165 Cm, berat badan 50 Kg, hobi saya bermain sepakbola dan bermain game disaat waktu luang.</p>
           </div>
         </div>
@@ -100,7 +102,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
-            <div class="card shadow">
+            <div class="card shadow" data-aos="flip-left" data-aos-duration="500">
               <img src="img/uiux.jpg" class="card-img-top" alt="Project 1" />
               <div class="card-body">
                 <p class="card-text">UI/UX Mobile App Design</p>
@@ -108,7 +110,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card shadow">
+            <div class="card shadow" data-aos="flip-left" data-aos-duration="500" data-aos-delay="50">
               <img src="img/2.jpg" class="card-img-top" alt="Project 2" />
               <div class="card-body">
                 <p class="card-text">Project tugas akhir membuat aplikasi rekam data kunjungan perpustakaan berbasis web dan IoT</p>
@@ -130,7 +132,7 @@
 
     <!--Contact-->
     <section id="skills">
-      <div class="container">
+      <div class="container" data-aos="fade-in">
         <div class="row text-center mb-3">
           <div class="col">
             <h2><i class="bi bi-bezier"></i>  Skills</h2>
@@ -191,6 +193,23 @@
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.lead',{ duration: 1, delay: 1.5, text:'Web Programmer | UI/UX Designer' })
+      gsap.from('.jumbotron img',{duration: 1, y:-100, opacity: 0, ease: 'bounce'})
+      gsap.from('.navbar', {duration: 1.5, y: '-100%', opacity: 0})
+      gsap.from('.display-4', {duration: 1, x: -50, opacity: 0, delay: 0.5})
+      gsap.from('.btn', {duration: 1, x: -50, opacity: 0, delay: 0.7})
+      </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once : true,
+      duration : 100,
+    });
+  </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
